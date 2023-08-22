@@ -1,4 +1,13 @@
 package br.com.luis.desafioamedigitalstarwars.domain;
 
-public record PlanetDTO(String name, String climate, String ground) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record PlanetDTO(
+        @NotBlank
+        String name,
+        @NotBlank
+        String climate,
+        @NotBlank
+        String ground) {
 }
